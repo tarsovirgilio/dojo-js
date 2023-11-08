@@ -20,17 +20,17 @@ function predefinedValueForParams(firstValue, secondValue = 0) {
 predefinedValueForParams(2);
 predefinedValueForParams(2, 8);
 
-function defineParamsByObjectDestruct({ name, lastName, age }) {
+function defineParamsByObjectDestructuring({ name, lastName, age }) {
   console.log(name, lastName, age)
 }
 
-const pessoa = {
+const person = {
   name: 'Tarso Virgilio',
   lastName: 'Coelho de Souza Silva',
   age: 34,
 }
 
-defineParamsByObjectDestruct(pessoa)
+defineParamsByObjectDestructuring(person)
 
 function defineParamsByArrayDestructuring([name, lastName, age]) {
   console.log(name, lastName, age)
@@ -40,7 +40,7 @@ function defineParamsByArrayDestructuring([name, lastName, age]) {
  * objeto em um array. 
  * ref.: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values 
  */
-defineParamsByArrayDestructuring(Object.values(pessoa))
+defineParamsByArrayDestructuring(Object.values(person))
 
 /* O operador "rest ( ... )" permite que o ultimo parametro receba todos os 
  * parametros não defindos de uma função como um array, porem somente se 
